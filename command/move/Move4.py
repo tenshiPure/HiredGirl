@@ -1,8 +1,13 @@
 #-*- coding: utf-8 -*-
 import os
 import os.path
+import sys
 
-class Move4:
+pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
+sys.path.append(os.path.abspath(pathNone))
+from Base import Base
+
+class Move4(Base):
 
 	category = 'move'
 
@@ -11,19 +16,28 @@ class Move4:
 
 	left = 0
 	top = 0
-	width = 960
-	height = 1080
 
-	env = ['ryowin', 'nebigwin', 'nebigmac']
+	env = 'ryowin'
+
+	if env ==  'ryowin':
+		width = 960
+		height = 1080
+
+	elif env ==  'nebigwin':
+		width = 960
+		height = 1080
+
+	elif env ==  'nebigmac':
+		width = 960
+		height = 1080
+
+	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 
 	#
 	# 実行
 	#
 	def execute(self):
-		scriptPath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/../../script')
-		scriptType = 'move'
-		scriptName = 'win.exe'
+		scriptName = 'move'
+		script = self.createScriptPath(scriptName)
 
-		script = '"%s/%s/%s"' % (scriptPath, scriptType, scriptName)
-
-		os.system('%s %s %s %s %s' % (script, self.left, self.top, self.width, self.height))
+		self.executeMoveScript(script)

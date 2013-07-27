@@ -4,10 +4,7 @@ class NoneObj:
 
 	category = 'none'
 
-	commandName = ' '
-	description = '不正入力'
-
-	env = ['ryowin', 'nebigwin', 'nebigmac']
+	commandName = 'paint'
 
 	#
 	# 実行

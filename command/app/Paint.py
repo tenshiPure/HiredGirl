@@ -1,28 +1,30 @@
 #-*- coding: utf-8 -*-
 import os
 import os.path
+import sys
 
-class Paint:
+pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
+sys.path.append(os.path.abspath(pathNone))
+from Base import Base
+
+class Paint(Base):
 
 	category = 'app'
 
 	commandName = 'paint'
 	description = 'Paint'
 
-	exeName = 'mspaint.exe'
-	exePath = r'C:\Windows\System32\mspaint.exe'
+	appName = 'mspaint.exe'
+	appPath = r'C:\Windows\System32\mspaint.exe'
 	winClass = 'MSPaintApp'
 
-	env = ['ryowin', 'nebigwin', 'nebigmac']
+	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 
 	#
-	# é¿çs
+	# ÂÆüË°å
 	#
 	def execute(self, isNew = None):
-		scriptPath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/../../script')
-		scriptType = 'active'
-		scriptName = 'win.exe'
+		scriptName = 'active' if isNew is None else 'new'
+		script = self.createScriptPath(scriptName)
 
-		script = '"%s/%s/%s"' % (scriptPath, scriptType, scriptName)
-
-		os.system('%s %s %s %s' % (script, self.exeName, self.exePath, self.winClass))
+		self.executeAppScript(script)

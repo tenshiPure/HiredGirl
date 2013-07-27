@@ -21,7 +21,6 @@ class Controller:
 		else:
 			command1.execute()
 		command2.execute()
-		command3.execute()
 
 input = 'paint 4'
 controller = Controller(input)
