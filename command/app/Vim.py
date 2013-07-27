@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class Vim(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'vim'
+	description = 'Vim'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'gvim.exe'
+	appPath  = r'C:\Program Files (x86)\vim\gvim.exe'
+	winClass = 'Vim'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 

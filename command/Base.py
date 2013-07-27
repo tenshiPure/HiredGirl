@@ -22,7 +22,10 @@ class Base:
 	# app系スクリプトを実行する
 	#
 	def executeAppScript(self, script):
-		os.system('%s %s %s %s' % (script, self.appName, self.appPath, self.winClass))
+		appName = self.appName.replace(' ', '_space_')
+		appPath = self.appPath.replace(' ', '_space_')
+		winClass = self.winClass.replace(' ', '_space_')
+		os.system('%s %s %s %s' % (script, appName, appPath, winClass))
 
 	#
 	# moveスクリプトを実行する

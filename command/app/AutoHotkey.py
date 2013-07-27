@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class AutoHotkey(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'ahk'
+	description = 'AutoHotkey'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'ahk'
+	appPath  = r'C:\Program Files\AutoHotkey\AutoHotKeyU64.exe'
+	winClass = ''
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 

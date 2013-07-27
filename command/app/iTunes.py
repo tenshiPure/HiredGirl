@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class iTunes(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'itunes'
+	description = 'iTunes'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'iTunes.exe'
+	appPath  = r'C:\Program Files (x86)\iTunes\iTunes.exe'
+	winClass = 'iTunes'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 

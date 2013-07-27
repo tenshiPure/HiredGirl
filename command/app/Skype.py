@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class Skype(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'skype'
+	description = 'Skype'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'Skype.exe'
+	appPath  = r'C:\Program Files (x86)\Skype\Phone\Skype.exe'
+	winClass = 'tSkMainForm'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 

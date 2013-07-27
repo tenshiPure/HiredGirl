@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class CravingExplorer(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'ce'
+	description = 'CravingExplorer'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'CravingExplorer.exe'
+	appPath  = r'C:\Program Files (x86)\CravingExplorer\CravingExplorer.exe'
+	winClass = 'Craving Explorer'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 

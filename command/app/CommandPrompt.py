@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class CommandPrompt(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'cp'
+	description = 'CommandPrompt'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'cmd.exe'
+	appPath  = r'C:\Windows\System32\cmd.exe'
+	winClass = 'ConsoleWindowClass'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 

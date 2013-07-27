@@ -14,8 +14,8 @@ class Paint(Base):
 	commandName = 'paint'
 	description = 'Paint'
 
-	appName = 'mspaint.exe'
-	appPath = r'C:\Windows\System32\mspaint.exe'
+	appName  = 'mspaint.exe'
+	appPath  = r'C:\Windows\System32\mspaint.exe'
 	winClass = 'MSPaintApp'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']

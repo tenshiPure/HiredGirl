@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class JoyToKey(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'joy'
+	description = 'JoyToKey'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'JoyToKey.exe'
+	appPath  = r'C:\Program Files\JoyToKey\JoyToKey.exe'
+	winClass = 'TMainForm'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 

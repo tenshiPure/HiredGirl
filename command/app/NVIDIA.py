@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class NVIDIA(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'nva'
+	description = 'NVIDIA'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'nvcplui.exe'
+	appPath  = r'C:\Program Files\NVIDIA Corporation\Control Panel Client\nvcplui.exe'
+	winClass = 'NVIDIA'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 

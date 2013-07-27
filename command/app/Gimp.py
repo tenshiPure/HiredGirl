@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class Gimp(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'gimp'
+	description = 'GIMP'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'GIMPPortable.exe'
+	appPath  = r'C:\Program Files (x86)\GIMP\GIMPPortable.exe'
+	winClass = 'ahk_class gdkWindowToplevel'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 

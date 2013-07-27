@@ -7,16 +7,16 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Firefox(Base):
+class VisualBoyAdvance(Base):
 
 	category = 'app'
 
-	commandName = 'fire'
-	description = 'FireFox'
+	commandName = 'vba'
+	description = 'VisualBoyAdvance'
 
-	appName  = 'firefox.exe'
-	appPath  = r'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
+	appName  = 'VisualBoyAdvance.exe'
+	appPath  = r'D:\Game\emulator\GBA\VisualBoyAdvanceLink\VisualBoyAdvance.exe'
+	winClass = 'Afx:400000:0:0:1900011:3a6d0763'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 
