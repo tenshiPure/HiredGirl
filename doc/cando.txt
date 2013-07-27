@@ -1,0 +1,75 @@
+app : アプリ系
+	command1
+		必須
+	command2
+		移動系, killのみ可
+	command3
+		newのみ可
+
+operate : 操作系
+	ss
+		command1
+			必須
+		command2
+			必須
+		command3
+			不正
+	sleep
+		command1
+			必須
+		command2
+			不正
+		command3
+			不正
+	exit, kill
+		command1
+			必須
+		command2
+			不正
+		command3
+			不正
+	desc
+		command1
+			必須
+		command2
+			env, allのみ可
+		command3
+			不正
+
+move : 移動系
+	top 0 1 2 3 4 5 6 7 8 9 11 22 33 44 55 66 77 88 99
+		command1
+			必須
+		command2
+			不正
+		command3
+			不正
+
+
+class Firefox:
+	category = 'app'
+
+	commandName = 'fire'
+	description = 'Firefox'
+
+	exeName = 'firefox.exe'
+	exePath = 'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
+	winClass = 'MozillaWindowClass'
+
+	env = ['ryowin', 'nebigwin', nebigmac']
+
+class Kill:
+	category = 'operate'
+
+	commandName = 'kill'
+	description = 'アプリケーションを終了'
+
+	env = ['ryowin', 'nebigwin', nebigmac']
+
+class MoveTop:
+	category = 'move'
+
+	commandName = 'top'
+	description = '最前面トグル'
+
+	env = ['ryowin', 'nebigwin', nebigmac']
