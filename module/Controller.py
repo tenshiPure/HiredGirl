@@ -1,4 +1,5 @@
 #-*- coding: utf-8 -*-
+import sys
 from CommandAnalyser import CommandAnalyser
 
 class Controller:
@@ -22,5 +23,5 @@ class Controller:
 			command1.execute()
 		command2.execute()
 
-input = 'paint 4'
-controller = Controller(input)
+inputed = sys.argv[1]
+controller = Controller(inputed)

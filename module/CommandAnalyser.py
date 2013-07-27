@@ -15,8 +15,8 @@ class CommandAnalyser:
 	# 入力値を分割して返す
 	#
 	def splitInput(self, input):
-		input += '  '
-		splited = input.split(' ', 2)
+		input += '__'
+		splited = input.split('_', 2)
 
 		return (splited[0], splited[1], splited[2])
 
