@@ -19,6 +19,8 @@ class Controller:
 
 		if command3.commandName == 'new':
 			command1.execute('new')
+		elif command1.commandName == 'ss':
+			command1.execute(input2)
 		else:
 			command1.execute()
 		command2.execute()

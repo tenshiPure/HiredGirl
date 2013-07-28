@@ -94,8 +94,6 @@ class CommandAnalyser:
 					return False
 
 		if command1.commandName == 'ss':
-			if command2.category == 'none':
-				return False
 			if command3.category != 'none':
 				return False
 

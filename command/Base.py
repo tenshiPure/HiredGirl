@@ -41,6 +41,12 @@ class Base:
 		os.system('%s %s %s %s %s' % (script, self.left, self.top, self.width, self.height))
 
 	#
+	# screenshotスクリプトを実行する
+	#
+	def executeScreenShotScript(self, script, paint, fileName):
+		os.system('%s %s %s %s' % (script, paint.appPath, paint.winClass, fileName))
+
+	#
 	# 引数がないスクリプトを実行する
 	#
 	def executeNoArgScript(self, script):
