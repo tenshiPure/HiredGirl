@@ -88,7 +88,7 @@ class CommandAnalyser:
 				if command3.category != 'none':
 					return False
 			else:
-				if command2.category != 'move' and command2.commandName != 'kill':
+				if command2.category != 'move' and command2.commandName != 'kill' and command2.commandName != 'exit':
 					return False
 				if command3.category != 'none' and command3.commandName != 'new':
 					return False

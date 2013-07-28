@@ -7,22 +7,19 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class Move00(Base):
+class Kill(Base):
+	category = 'operate'
 
-	category = 'move'
+	commandName = 'kill'
+	description = 'アプリケーションを終了'
 
-	commandName = '0'
-	description = '最小化'
-
-	env = 'ryowin'
-
-	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
+	env = ['ryowin', 'nebigwin', 'nebigmac']
 
 	#
 	# 実行
 	#
 	def execute(self):
-		scriptName = 'minimize'
+		scriptName = 'kill'
 		script = self.createScriptPath(scriptName)
 
 		self.executeNoArgScript(script)

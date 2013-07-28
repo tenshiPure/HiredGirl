@@ -41,7 +41,7 @@ class Base:
 		os.system('%s %s %s %s %s' % (script, self.left, self.top, self.width, self.height))
 
 	#
-	# minimizeスクリプトを実行する
+	# 引数がないスクリプトを実行する
 	#
-	def executeMinimizeScript(self, script):
+	def executeNoArgScript(self, script):
 		os.system('%s' % (script))
