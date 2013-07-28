@@ -9,7 +9,7 @@ from Base import Base
 
 class GoogleChrome(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'chrome'
 	description = 'GoogleChrome'

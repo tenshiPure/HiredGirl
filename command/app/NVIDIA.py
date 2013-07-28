@@ -9,7 +9,7 @@ from Base import Base
 
 class NVIDIA(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'nva'
 	description = 'NVIDIA'

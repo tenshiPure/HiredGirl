@@ -9,7 +9,7 @@ from Base import Base
 
 class Paint(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'paint'
 	description = 'Paint'

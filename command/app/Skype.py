@@ -9,7 +9,7 @@ from Base import Base
 
 class Skype(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'skype'
 	description = 'Skype'

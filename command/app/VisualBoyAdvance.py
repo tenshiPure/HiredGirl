@@ -9,7 +9,7 @@ from Base import Base
 
 class VisualBoyAdvance(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'vba'
 	description = 'VisualBoyAdvance'

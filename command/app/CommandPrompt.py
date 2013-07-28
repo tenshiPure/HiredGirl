@@ -9,7 +9,7 @@ from Base import Base
 
 class CommandPrompt(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'cp'
 	description = 'CommandPrompt'

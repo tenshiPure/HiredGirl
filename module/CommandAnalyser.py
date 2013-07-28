@@ -38,6 +38,10 @@ class CommandAnalyser:
 		command = self._walkCompare(pathApp, input)
 
 		if command is None:
+			pathDir = os.path.dirname(os.path.abspath(__file__)) + '/../command/dir/'
+			command = self._walkCompare(pathDir, input)
+
+		if command is None:
 			pathOperate = os.path.dirname(os.path.abspath(__file__)) + '/../command/operate/'
 			command = self._walkCompare(pathOperate, input)
 
@@ -79,7 +83,7 @@ class CommandAnalyser:
 		if command1.category == 'none':
 			return False
 
-		if command1.category == 'app':
+		if command1.category == 'process':
 			if command2.category == 'none':
 				if command3.category != 'none':
 					return False

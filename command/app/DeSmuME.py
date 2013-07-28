@@ -9,7 +9,7 @@ from Base import Base
 
 class DeSmuME(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'ds'
 	description = 'DeSmuME'

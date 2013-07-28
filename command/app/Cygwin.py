@@ -9,7 +9,7 @@ from Base import Base
 
 class Cygwin(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'cyg'
 	description = 'Cygwin'

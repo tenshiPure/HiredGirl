@@ -9,7 +9,7 @@ from Base import Base
 
 class Project64(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'pj'
 	description = 'Project64'

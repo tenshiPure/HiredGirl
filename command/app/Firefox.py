@@ -9,7 +9,7 @@ from Base import Base
 
 class Firefox(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'fire'
 	description = 'FireFox'

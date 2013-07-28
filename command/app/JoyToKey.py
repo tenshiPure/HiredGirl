@@ -9,7 +9,7 @@ from Base import Base
 
 class JoyToKey(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'joy'
 	description = 'JoyToKey'

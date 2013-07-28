@@ -9,7 +9,7 @@ from Base import Base
 
 class CravingExplorer(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'ce'
 	description = 'CravingExplorer'

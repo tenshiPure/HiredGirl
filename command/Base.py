@@ -28,6 +28,13 @@ class Base:
 		os.system('%s %s %s %s' % (script, appName, appPath, winClass))
 
 	#
+	# dir系スクリプトを実行する
+	#
+	def executeDirScript(self, script):
+		dirPath = self.dirPath.replace(' ', '_space_')
+		os.system('%s %s %s %s' % (script, 'blah', dirPath, 'CabinetWClass'))
+
+	#
 	# moveスクリプトを実行する
 	#
 	def executeMoveScript(self, script):

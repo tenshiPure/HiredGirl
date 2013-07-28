@@ -7,16 +7,14 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class iTunes(Base):
+class Download(Base):
 
 	category = 'process'
 
-	commandName = 'itunes'
-	description = 'iTunes'
+	commandName = 'down'
+	description = 'Download'
 
-	appName  = 'iTunes.exe'
-	appPath  = r'C:\Program Files (x86)\iTunes\iTunes.exe'
-	winClass = 'iTunes'
+	dirPath  = r'D:\Download'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 
@@ -27,4 +25,5 @@ class iTunes(Base):
 		scriptName = 'active' if isNew is None else 'new'
 		script = self.createScriptPath(scriptName)
 
-		self.executeAppScript(script)
+		print script
+		self.executeDirScript(script)

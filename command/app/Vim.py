@@ -9,7 +9,7 @@ from Base import Base
 
 class Vim(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'vim'
 	description = 'Vim'

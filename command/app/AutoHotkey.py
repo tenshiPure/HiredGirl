@@ -9,7 +9,7 @@ from Base import Base
 
 class AutoHotkey(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'ahk'
 	description = 'AutoHotkey'

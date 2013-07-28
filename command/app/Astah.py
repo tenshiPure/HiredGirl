@@ -9,7 +9,7 @@ from Base import Base
 
 class Astah(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'astah'
 	description = 'Astah'

@@ -9,7 +9,7 @@ from Base import Base
 
 class Gimp(Base):
 
-	category = 'app'
+	category = 'process'
 
 	commandName = 'gimp'
 	description = 'GIMP'

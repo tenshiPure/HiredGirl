@@ -7,16 +7,14 @@ pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../'
 sys.path.append(os.path.abspath(pathNone))
 from Base import Base
 
-class iTunes(Base):
+class Trash(Base):
 
 	category = 'process'
 
-	commandName = 'itunes'
-	description = 'iTunes'
+	commandName = 'trash'
+	description = 'Trash'
 
-	appName  = 'iTunes.exe'
-	appPath  = r'C:\Program Files (x86)\iTunes\iTunes.exe'
-	winClass = 'iTunes'
+	dirPath  = r'C:\$Recycle.Bin\S-1-5-21-1672928867-819109563-735477428-500'
 
 	executableEnv = ['ryowin', 'nebigwin', 'nebigmac']
 
@@ -27,4 +25,5 @@ class iTunes(Base):
 		scriptName = 'active' if isNew is None else 'new'
 		script = self.createScriptPath(scriptName)
 
-		self.executeAppScript(script)
+		print script
+		self.executeDirScript(script)
