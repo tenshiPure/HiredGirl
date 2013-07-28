@@ -17,13 +17,19 @@ class Controller:
 			print 'invalid inputs'
 			return
 
+		if command2.commandName == 'new':
+			command1.execute('new')
+
 		if command3.commandName == 'new':
 			command1.execute('new')
+			command2.execute()
+
 		elif command1.commandName == 'ss':
 			command1.execute(input2)
+
 		else:
 			command1.execute()
-		command2.execute()
+			command2.execute()
 
 inputed = sys.argv[1]
 controller = Controller(inputed)

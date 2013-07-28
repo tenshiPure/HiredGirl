@@ -15,10 +15,24 @@ class CommandAnalyser:
 	# 入力値を分割して返す
 	#
 	def splitInput(self, input):
-		input += '__'
 		splited = input.split('_', 2)
 
-		return (splited[0], splited[1], splited[2])
+		try:
+			input1 = splited[0]
+		except:
+			input1 = ''
+
+		try:
+			input2 = splited[1]
+		except:
+			input2 = ''
+
+		try:
+			input3 = splited[2]
+		except:
+			input3 = ''
+
+		return (input1, input2, input3)
 
 	#
 	# 入力値からコマンドを生成する
@@ -48,6 +62,10 @@ class CommandAnalyser:
 		if command is None:
 			pathMove = os.path.dirname(os.path.abspath(__file__)) + '/../command/move/'
 			command = self._walkCompare(pathMove, input)
+
+		if command is None:
+			pathOption = os.path.dirname(os.path.abspath(__file__)) + '/../command/other/'
+			command = self._walkCompare(pathOption, input)
 
 		if command is None:
 			pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../command/'
@@ -84,13 +102,13 @@ class CommandAnalyser:
 			return False
 
 		if command1.category == 'process':
-			if command2.category == 'none':
+			if command2.category == 'none' or command2.commandName == 'new':
 				if command3.category != 'none':
 					return False
 			else:
-				if command2.category != 'move' and command2.commandName != 'kill' and command2.commandName != 'exit':
+				if command2.category != 'move' and command2.commandName != 'kill' and command2.commandName != 'exit' and command2.commandName != 'new':
 					return False
-				if command3.category != 'none' and command3.commandName != 'new':
+				if command2.category != 'move' and command3.commandName != 'new':
 					return False
 
 		if command1.commandName == 'ss':
