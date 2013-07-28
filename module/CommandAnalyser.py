@@ -67,12 +67,6 @@ class CommandAnalyser:
 			pathOption = os.path.dirname(os.path.abspath(__file__)) + '/../command/other/'
 			command = self._walkCompare(pathOption, input)
 
-		if command is None:
-			pathNone = os.path.dirname(os.path.abspath(__file__)) + '/../command/'
-			sys.path.append(os.path.abspath(pathNone))
-			from NoneObj import NoneObj
-			command = NoneObj()
-
 		return command
 
 	#
