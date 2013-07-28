@@ -35,7 +35,13 @@ class Base:
 		os.system('%s %s %s %s' % (script, 'blah', dirPath, 'CabinetWClass'))
 
 	#
-	# moveスクリプトを実行する
+	# move系スクリプトを実行する
 	#
 	def executeMoveScript(self, script):
 		os.system('%s %s %s %s %s' % (script, self.left, self.top, self.width, self.height))
+
+	#
+	# minimizeスクリプトを実行する
+	#
+	def executeMinimizeScript(self, script):
+		os.system('%s' % (script))
