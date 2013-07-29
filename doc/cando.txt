@@ -44,32 +44,3 @@ move : 移動系
 			不正
 		command3
 			不正
-
-
-class Firefox:
-	category = 'app'
-
-	commandName = 'fire'
-	description = 'Firefox'
-
-	exeName = 'firefox.exe'
-	exePath = 'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
-	winClass = 'MozillaWindowClass'
-
-	env = ['ryowin', 'nebigwin', nebigmac']
-
-class Kill:
-	category = 'operate'
-
-	commandName = 'kill'
-	description = 'アプリケーションを終了'
-
-	env = ['ryowin', 'nebigwin', nebigmac']
-
-class MoveTop:
-	category = 'move'
-
-	commandName = 'top'
-	description = '最前面トグル'
-
-	env = ['ryowin', 'nebigwin', nebigmac']
